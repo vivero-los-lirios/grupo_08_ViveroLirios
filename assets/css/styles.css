@@ -1,0 +1,35 @@
+:root{
+  --primaryColor: #F1FFE7;  /* color de fondo */
+  --secondaryColor: #891D44; /* color de las tarjetas, iconos y formulario (al 40%) */
+  --accentColor: #CFA116; /* color de los botones */
+
+  /* textos */
+  --titleColor: #000;  /* titulos y subtitulos */
+  --textColor: #1a1a1a; /* el resto de texto */
+  --cardTitle: #fff; /* titulo de las tarjetas */
+  --cardText: #fafafa; /* texto de la tarjetas */
+
+
+  /* 
+    *Titulo: Roboto bold 48px #000
+    *Subtitulos: Roboto regular 32px 
+    *Textos: Roboto regular 24px
+    *Texto del header: Roboto regular 18px (line-height: 22px)
+
+    *Tarjetas: 
+      -Titutlo: Roboto bold 20px #fff
+      -Texto: Roboto regular 16px #fcfcfc
+  */
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: var(--primaryColor);
+}
