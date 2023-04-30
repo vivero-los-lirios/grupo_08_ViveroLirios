@@ -33,3 +33,65 @@
 body{
   background-color: var(--primaryColor);
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  /* padding: 5px; */
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 15px;
+  height: 200px;
+}
+
+#product-title{
+  grid-column: 1 / 4;
+  font-family: 'Roboto', regular;
+  font-size: 32px; 
+} 
+.grid-item{
+  background-color: #891D44;
+  box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);
+  transition: 0.3s;
+  border-radius: 8px;
+  height: max-content;
+} 
+
+.grid-item:hover {
+  box-shadow: 0 8px 16px 0 rgba(97, 11, 11, 0.733);
+}
+
+.image-item {
+  padding: 5px;
+  height: 250px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.card-info{
+  width: 300px;
+  padding: 2px 16px;
+}
+
+.card-title{
+  font-family: 'Roboto', bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+.card-text{
+  font-family: 'Roboto', regular;
+  font-size: 16px;
+  color: #fcfcfc;
+}
+
+.btn-item{
+  background-color: var(--accentColor);
+  font-family: 'Roboto', regular;
+  border: none;
+  margin: 5px auto;
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);;
+}
