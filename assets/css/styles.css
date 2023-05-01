@@ -1,13 +1,20 @@
-:root{
-  --primaryColor: #F1FFE7;  /* color de fondo */
-  --secondaryColor: #891D44; /* color de las tarjetas, iconos y formulario (al 40%) */
-  --accentColor: #CFA116; /* color de los botones */
+:root {
+  --primaryColor: #F1FFE7;
+  /* color de fondo */
+  --secondaryColor: #891D44;
+  /* color de las tarjetas, iconos y formulario (al 40%) */
+  --accentColor: #CFA116;
+  /* color de los botones */
 
   /* textos */
-  --titleColor: #000;  /* titulos y subtitulos */
-  --textColor: #1a1a1a; /* el resto de texto */
-  --cardTitle: #fff; /* titulo de las tarjetas */
-  --cardText: #fafafa; /* texto de la tarjetas */
+  --titleColor: #000;
+  /* titulos y subtitulos */
+  --textColor: #1a1a1a;
+  /* el resto de texto */
+  --cardTitle: #fff;
+  /* titulo de las tarjetas */
+  --cardText: #fafafa;
+  /* texto de la tarjetas */
 
 
   /* 
@@ -23,75 +30,89 @@
 
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
   background-color: var(--primaryColor);
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 20% 20% 20%;
-  /* padding: 5px; */
   align-items: center;
   justify-content: center;
-  column-gap: 50px;
-  row-gap: 15px;
-  height: 200px;
+  column-gap: 35px;
+  row-gap: 45px;
 }
 
-#product-title{
+#product-title {
   grid-column: 1 / 4;
   font-family: 'Roboto', regular;
-  font-size: 32px; 
-} 
-.grid-item{
-  background-color: #891D44;
+  font-size: 32px;
+  text-align: justify;
+
+}
+
+.grid-item {
+  background-color: var(--secondaryColor);
   box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);
-  transition: 0.3s;
-  border-radius: 8px;
-  height: max-content;
-} 
+  border-radius: 10px;
+  padding: 0rem;
+  height: fit-content;
+}
 
 .grid-item:hover {
   box-shadow: 0 8px 16px 0 rgba(97, 11, 11, 0.733);
+  transform: scale(1.1);
+  /*efecto para aumentar la imagen*/
+  transition: all ease-in 0.3s;
 }
 
 .image-item {
-  padding: 5px;
-  height: 250px;
-  border-radius: 15px;
   width: 100%;
+  height: 250px;
+  border-radius: 10px 10px 0px 0px;
 }
 
-.card-info{
-  width: 300px;
-  padding: 2px 16px;
+.card-info {
+  width: 100%;
+ padding: 2px 8px; 
+  text-align: left;
 }
 
-.card-title{
+.card-title {
   font-family: 'Roboto', bold;
-  font-size: 20px;
-  color: #fff;
+  font-size: 20px; 
+  color: var(--cardTitle);
 }
 
-.card-text{
+.card-text {
   font-family: 'Roboto', regular;
-  font-size: 16px;
-  color: #fcfcfc;
+  font-size: 16px; 
+  color: var(--cardText);
 }
 
-.btn-item{
+.btn-item {
+  width: 100%;
+  text-align: center;
   background-color: var(--accentColor);
-  font-family: 'Roboto', regular;
+  font-family: 'Roboto', bold;
+  font-size: 15px;
   border: none;
   margin: 5px auto;
-  padding: 5px 10px;
+  padding: 5px 20px;
   border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);;
+  box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);
 }
+
+.btn-item:hover {
+  background-color: var(--cardText);
+  color: var(--secondaryColor);
+  box-shadow: 0 4px 8px 0 rgba(155, 132, 132, 0.493);
+}
+
