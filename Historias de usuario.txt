@@ -7,6 +7,8 @@
 7-Como cliente quiero poder tener una linea de contacto donde hacer consultas.(agregar formulario de consultas).
 8-Como cliente quiero poder ver claramente los productos y servicios que brinda el vivero. (crear una grilla de productos y servicios)
 9-Como cliente quiero poder acceder al sitio desde mi celular y desde la pc.(El sitio debe ser responsive)
+10-Como cliente quiero poder abonar los productos atraves de la pagina web mediante algun metodo seguro. (pasarella de pagos)
+11-Como cliente quiero poder ver los productos por categoria.
 
 
 
