@@ -15,10 +15,11 @@
 
 <body>
 
-  <section id="productos">
-    
+  <section id="productos" class="flex-productos-container">
+    <div>
+      <h2 id="product-title">Productos: </h2>
+    </div>
     <div class="grid-container">
-      <h2 id="product-title">Productos: </h2>  
 
       <div class=grid-item>
         <img src="./assets/images/lirio_rojo.jpg" alt="imagen de un lirio color rojo." class="image-item" id="item1">
@@ -86,7 +87,8 @@
         </div>
       </div>
       <div class=grid-item>
-        <img src="./assets/images/herramientas.jpg" alt="imagen de herramientas de jardineria." class="image-item" id="item9">
+        <img src="./assets/images/herramientas.jpg" alt="imagen de herramientas de jardineria." class="image-item"
+          id="item9">
         <div class="card-info">
           <h4 class="card-title">Herramientas.</h4>
           <p class="card-text">Palas, regaderas, mangueras y mas.</p>
@@ -95,6 +97,47 @@
       </div>
     </div>
   </section>
+
+  <!-- Acá comenzamos con la seccion de servicios -->
+  <section id="servicios" >
+    
+    <div class="flex-elem-serv">
+      <div>
+        <h2 id="servicios-title">Servicios: </h2>
+      </div>
+      
+      <div class="serv-flex-container">
+        
+        <div class="serv-flex-item">
+          <div class="card-info">
+            <h4 class="card-title-serv">Asesoramiento Profecional.</h4>
+            <p class="card-text">Despejamos todas sus dudas al instante.</p>
+          </div>
+          <img class="image-serv" src="./assets/images/profecional.jpg" alt="imagen de un profecional botánico.">
+        </div>
+        
+        <div class="serv-flex-item">
+          <div class="card-info">
+            <h4 class="card-title-serv">Diseño y ejecucion de parques y jardines.</h4>
+            <p class="card-text">Contamos con especialistas en paisajismo.</p>
+          </div>
+          <img class="image-serv" src="./assets/images/servicio_jardineria.jpg" alt="imagen de un paisajista trabajando.">
+        </div>
+        
+        <div class="serv-flex-item">
+          <div class="card-info">
+            <h4 class="card-title-serv">Envios a Domicilio.</h4>
+            <p class="card-text">Consulte precios por envios a domicilio.</p>
+          </div>
+          <img class="image-serv" src="./assets/images/entrega.jpg" alt="imagen de hombre haciendo entrega a domicilio.">
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
 </body>
 
 </html>
