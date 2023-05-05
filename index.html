@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./assets/css/footer.css" />
   <link rel="stylesheet" href="./assets/css/header.css" />
   <script src="https://kit.fontawesome.com/23b68efae4.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./assets/images/icono.png" type="image/x-icon">
 
 </head>
 
@@ -22,14 +23,14 @@
   <header class="header">
     <div class="header__contenedor">
       <nav class="navegacion">
-       <div class="navegacion__logo">
-        <img class="img" src="./assets/images/logo.png" alt="logo">
-       </div>
-    
+        <div class="navegacion__logo">
+          <img class="img" src="./assets/images/logo.png" alt="logo">
+        </div>
+
         <ul class="menu">
           <li class="menu_li"><a class="menu_link" href="#">INICIO</a></li>
-          <li class="menu_li"><a class="menu_link" href="#">PRODUCTOS</a></li>
-          <li class="menu_li"><a class="menu_link" href="#">SERVICIOS</a></li>
+          <li class="menu_li"><a class="menu_link" href="#productos">PRODUCTOS</a></li>
+          <li class="menu_li"><a class="menu_link" href="#servicios">SERVICIOS</a></li>
           <li class="menu_li"><a class="menu_link" href="#">NOSOTROS</a></li>
           <li class="menu_li"><a class="menu_link" href="#">CONTACTO</a></li>
           <li class="menu_li">
@@ -41,185 +42,215 @@
           <li class="menu_li"><a class="menu_link" href="#">Log In</a></li>
           <li class="menu_li"><a class="menu_link" href="#">Log Out</a></li>
           <li class="menu_li"><a class="menu_link" href="#"><i class="fa fa-shopping-cart"></i></a></li>
-        </ul>  
+        </ul>
       </nav>
     </div>
-    
-</header>
+
+  </header>
 
 
-<!--Seccion Productos-->
- <section id="productos">
-    
-  <section id="productos" class="flex-productos-container">
-    <div>
-      <h2 id="product-title">Productos: </h2>
-    </div>
+  <!--Seccion Productos-->
+  <section id="productos">
 
-    <div class="grid-container">
-
-      <div class=grid-item>
-        <img src="./assets/images/lirio_rojo.jpg" alt="imagen de un lirio color rojo." class="image-item" id="item1">
-        <div class="card-info">
-          <h4 class="card-title">Lirio Rojo.</h4>
-          <p class="card-text">Simbolismo: Amor y Seducción.</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-
-      <div class=grid-item>
-        <img src="./assets/images/lirio_blanco.jpg" alt="imagen de un lirio color blanco" class="image-item" id="item2">
-        <div class="card-info">
-          <h4 class="card-title">Lirio Blanco.</h4>
-          <p class="card-text">Simbolismo: Pureza y Belleza.</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-      <div class=grid-item>
-        <img src="./assets/images/lirio_naranja.jpg" alt="imagen de un lirio naranja" class="image-item" id="item3">
-        <div class="card-info">
-          <h4 class="card-title">Lirio Naranja.</h4>
-          <p class="card-text">Simbolismo: Pasión.</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-      <div class=grid-item>
-        <img src="./assets/images/frutales_rojo.jpg" alt="imagen de arbol frutal" class="image-item" id="item4">
-        <div class="card-info">
-          <h4 class="card-title">Árboles frutales.</h4>
-          <p class="card-text">Consultar según la temporada.</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-      <div class=grid-item>
-        <img src="./assets/images/cactus_verde.jpg" alt="imagen de cactus." class="image-item" id="item5">
-        <div class="card-info">
-          <h4 class="card-title">Cactus.</h4>
-          <p class="card-text">Fuentes de éxito personal y laboral.</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-      <div class=grid-item>
-        <img src="./assets/images/gromineas1.jpg" alt="imagen de gromíneas" class="image-item" id="item6">
-        <div class="card-info">
-          <h4 class="card-title">Gromíneas.</h4>
-          <p class="card-text">Plantita espetacular para decorar</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-      <div class=grid-item>
-        <img src="./assets/images/fuente_jardin.jpg" alt="imagen de fuentes de jardin" class="image-item" id="item7">
-        <div class="card-info">
-          <h4 class="card-title">Fuentes de Jardín</h4>
-          <p class="card-text">Contamos con distintos modelos.</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-      <div class=grid-item>
-        <img src="./assets/images/maceta_roja.jpg" alt="imagen de maceta roja." class="image-item" id="item8">
-        <div class="card-info">
-          <h4 class="card-title">Macetas</h4>
-          <p class="card-text">Variedad en colores y modelos.</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-      <div class=grid-item>
-        <img src="./assets/images/herramientas.jpg" alt="imagen de herramientas de jardineria." class="image-item"
-          id="item9">
-        <div class="card-info">
-          <h4 class="card-title">Herramientas.</h4>
-          <p class="card-text">Palas, regaderas, mangueras y mas.</p>
-          <button class="btn-item">COMPRAR</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Acá comenzamos con la seccion de servicios -->
-  <section id="servicios" >
-    
-    <div class="flex-elem-serv">
+    <section id="productos" class="flex-productos-container">
       <div>
-        <h2 id="servicios-title">Servicios: </h2>
+        <h2 id="product-title">Productos: </h2>
       </div>
-      
-      <div class="serv-flex-container">
-        
-        <div class="serv-flex-item">
+
+      <div class="grid-container">
+
+        <div class=grid-item>
+          <img src="./assets/images/lirio_rojo.jpg" alt="imagen de un lirio color rojo." class="image-item" id="item1">
           <div class="card-info">
-            <h4 class="card-title-serv">Asesoramiento Profecional.</h4>
-            <p class="card-text">Despejamos todas sus dudas al instante.</p>
+            <h4 class="card-title">Lirio Rojo.</h4>
+            <p class="card-text">Simbolismo: Amor y Seducción.</p>
+            <button class="btn-item">IR A COMPRAR</button>
           </div>
-          <img class="image-serv" src="./assets/images/profecional.jpg" alt="imagen de un profecional botánico.">
         </div>
-        
-        <div class="serv-flex-item">
+
+        <div class=grid-item>
+          <img src="./assets/images/lirio_blanco.jpg" alt="imagen de un lirio color blanco" class="image-item"
+            id="item2">
           <div class="card-info">
-            <h4 class="card-title-serv">Diseño y ejecucion de parques y jardines.</h4>
-            <p class="card-text">Contamos con especialistas en paisajismo.</p>
+            <h4 class="card-title">Lirio Blanco.</h4>
+            <p class="card-text">Simbolismo: Pureza y Belleza.</p>
+            <button class="btn-item">IR A COMPRAR</button>
           </div>
-          <img class="image-serv" src="./assets/images/servicio_jardineria.jpg" alt="imagen de un paisajista trabajando.">
         </div>
-        
-        <div class="serv-flex-item">
+        <div class=grid-item>
+          <img src="./assets/images/lirio_naranja.jpg" alt="imagen de un lirio naranja" class="image-item" id="item3">
           <div class="card-info">
-            <h4 class="card-title-serv">Envios a Domicilio.</h4>
-            <p class="card-text">Consulte precios por envios a domicilio.</p>
+            <h4 class="card-title">Lirio Naranja.</h4>
+            <p class="card-text">Simbolismo: Pasión.</p>
+            <button class="btn-item">IR A COMPRAR</button>
           </div>
-          <img class="image-serv" src="./assets/images/entrega.jpg" alt="imagen de hombre haciendo entrega a domicilio.">
+        </div>
+        <div class=grid-item>
+          <img src="./assets/images/frutales_rojo.jpg" alt="imagen de arbol frutal" class="image-item" id="item4">
+          <div class="card-info">
+            <h4 class="card-title">Árboles frutales.</h4>
+            <p class="card-text">Consultar según la temporada.</p>
+            <button class="btn-item">IR A COMPRAR</button>
+          </div>
+        </div>
+        <div class=grid-item>
+          <img src="./assets/images/cactus_verde.jpg" alt="imagen de cactus." class="image-item" id="item5">
+          <div class="card-info">
+            <h4 class="card-title">Cactus.</h4>
+            <p class="card-text">Fuentes de éxito personal y laboral.</p>
+            <button class="btn-item">IR A COMPRAR</button>
+          </div>
+        </div>
+        <div class=grid-item>
+          <img src="./assets/images/gromineas1.jpg" alt="imagen de gromíneas" class="image-item" id="item6">
+          <div class="card-info">
+            <h4 class="card-title">Gromíneas.</h4>
+            <p class="card-text">Plantita espetacular para decorar</p>
+            <button class="btn-item">IR A COMPRAR</button>
+          </div>
+        </div>
+        <div class=grid-item>
+          <img src="./assets/images/fuente_jardin.jpg" alt="imagen de fuentes de jardin" class="image-item" id="item7">
+          <div class="card-info">
+            <h4 class="card-title">Fuentes de Jardín</h4>
+            <p class="card-text">Contamos con distintos modelos.</p>
+            <button class="btn-item">IR A COMPRAR</button>
+          </div>
+        </div>
+        <div class=grid-item>
+          <img src="./assets/images/maceta_roja.jpg" alt="imagen de maceta roja." class="image-item" id="item8">
+          <div class="card-info">
+            <h4 class="card-title">Macetas</h4>
+            <p class="card-text">Variedad en colores y modelos.</p>
+            <button class="btn-item">IR A COMPRAR</button>
+          </div>
+        </div>
+        <div class=grid-item>
+          <img src="./assets/images/herramientas.jpg" alt="imagen de herramientas de jardineria." class="image-item"
+            id="item9">
+          <div class="card-info">
+            <h4 class="card-title">Herramientas.</h4>
+            <p class="card-text">Palas, regaderas, mangueras y mas.</p>
+            <button class="btn-item">IR A COMPRAR</button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- seccion de informacion -->
+    <section id="informacion">
+      <div class="info-container">
+        <div class="info-item">
+          <img src="./assets/icons/001-nuevo.png" alt="imagen de promocion.">
+          <h3>No te pierdas nuestras promociones.</h3>
+          <p>Seguinos.</p>
+
+        </div>
+        <div class="info-item">
+          <img src="./assets/icons/002-cupn.png" alt="imagen de tarjeta de regalo">
+
+          <h3>Regala una Giftcard.</h3>
+          <p>Podes realizar regalos por montos.</p>
+        </div>
+
+        <div class="info-item">
+          <img src="./assets/icons/003-negro.png" alt="imagen de forma de pago.">
+
+          <h3>Pago Seguro</h3>
+          <p>Realizá tu compra con tarjeta, transferencia o efectivo.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Acá comenzamos con la seccion de servicios -->
+    <section id="servicios">
+
+      <div class="flex-elem-serv">
+        <div>
+          <h2 id="servicios-title">Servicios: </h2>
+        </div>
+
+        <div class="serv-flex-container">
+
+          <div class="serv-flex-item">
+            <div class="card-info">
+              <h4 class="card-title-serv">Asesoramiento Profecional.</h4>
+              <p class="card-text-serv">Despejamos todas sus dudas al instante.</p>
+            </div>
+            <img class="image-serv" src="./assets/images/profecional.jpg" alt="imagen de un profecional botánico.">
+          </div>
+
+          <div class="serv-flex-item">
+            <div class="card-info">
+              <h4 class="card-title-serv">Diseño y ejecucion de parques y jardines.</h4>
+              <p class="card-text-serv">Contamos con especialistas en paisajismo.</p>
+            </div>
+            <img class="image-serv" src="./assets/images/servicio_jardineria.jpg"
+              alt="imagen de un paisajista trabajando.">
+          </div>
+
+          <div class="serv-flex-item">
+            <div class="card-info">
+              <h4 class="card-title-serv">Envios a Domicilio.</h4>
+              <p class="card-text-serv">Consulte precios por envios a domicilio.</p>
+            </div>
+            <img class="image-serv" src="./assets/images/entrega.jpg"
+              alt="imagen de hombre haciendo entrega a domicilio.">
+          </div>
+        </div>
+      </div>
 
 
-  </section>
+    </section>
 
-<!--Seccion footer-->
-  <section>    
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
-            <h4>Compañia</h4>
+    <!--Seccion footer-->
+    <section>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Compañia</h4>
               <ul>
                 <li><a href="#">Sobre Nosotros</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Productos</a></li>
                 <li><a href="#"><i class="fa fa-whatsapp"> +549-113245678</i></a></li>
-              </ul>          
-          </div>
-          <div class="footer-col">
-            <h4>Ayuda</h4>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Ayuda</h4>
               <ul>
                 <li><a href="#">Envios</a></li>
                 <li><a href="#">Devoluciones</a></li>
                 <li><a href="#">Estado de orden</a></li>
                 <li><a href="#">Opciones de pago</a></li>
-              </ul>          
-          </div>
-          <div class="footer-col">
-            <h4>Compra On-line</h4>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Compra On-line</h4>
               <ul>
                 <li><a href="#">Ver productos</a></li>
                 <li><a href="#">Ver servicios</a></li>
-              </ul>          
-          </div>
-          <div class="footer-col">
-            <h4>Redes Sociales</h4>
-            <div class="redes-sociales">
-              <ul>
-                <a href="#"><i class="fab fa-facebook"></i></a> 
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>         
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Redes Sociales</h4>
+              <div class="redes-sociales">
+                <ul>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </section>
+      </footer>
+    </section>
 
-
+    <div id="whatsapp">
+      <a href="#"><img src="./assets/icons/whatsapp.png" alt="icono de whatsapp"></a>
+    </div>
 
 </body>
 
