@@ -43,26 +43,62 @@ body {
   
 }
 
+.slider{
+  height: 720px; 
+	width: 100vw;
+		margin:0px;
+	overflow: hidden;
+}
+
+.slider ul{
+  display: flex;
+	padding: 0;
+	width: 400%;
+	animation: carrusel 20s infinite alternate ease-in-out;
+} 
+
+.slider li{
+  list-style: none;
+  width: 100%;
+}
+.slider img{
+  width: 100%;
+} 
+
+@keyframes carrusel{
+  0% {margin-left: 0%;}
+  20% {margin-left: 0%;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  95% {margin-left: -300%;}
+
+}
+
 .flex-productos-container {
   display: flex;
-  margin: 50px 150px;
+  margin: 3.125rem 9.375rem;
   flex-direction: column;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* align-items: center; */
-  justify-content: center;
-  column-gap: 35px;
-  row-gap: 45px;
-  margin: 50px  150px;
+  grid-template-columns: repeat(auto-fit, minmax(14.625rem, 1fr));
+  justify-content: space-between;
+  column-gap: 2.188rem;
+  row-gap: 2.813rem;
+  margin: 3.125rem  9.375rem;
 }
 
 #product-title {
   grid-column: 1 / 4;
   font-family: 'Roboto', regular;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: justify;
 }
 
@@ -71,14 +107,12 @@ body {
   box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);
   border-radius: 10px;
   padding: 0rem;
-  width: 275px;
   height: fit-content;
 }
 
 .grid-item:hover {
   box-shadow: 0 8px 16px 0 rgba(97, 11, 11, 0.733);
   transform: scale(1.1);
-  /*efecto para aumentar la imagen*/
   transition: all ease-in 0.3s;
 }
 
@@ -96,13 +130,13 @@ body {
 
 .card-title {
   font-family: 'Roboto', bold;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--cardTitle);
 }
 
 .card-text {
   font-family: 'Roboto', regular;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--cardText);
 }
 
@@ -111,7 +145,7 @@ body {
   text-align: center;
   background-color: var(--accentColor);
   font-family: 'Roboto', bold;
-  font-size: 15px;
+  font-size: 1rem;
   border: none;
   margin: 5px auto;
   padding: 5px 20px;
@@ -128,7 +162,7 @@ body {
 /*estilos  para la seccion servicios*/
 #servicios-title {
   font-family: 'Roboto', regular;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: justify;
   margin-bottom: 50px;
 }
@@ -136,36 +170,38 @@ body {
 .flex-elem-serv {
   display: flex;
   flex-direction: column;
-  margin: 50px 150px;
+  margin: 3.125rem 9.375rem;
+  
 }
 
 .serv-flex-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
-
+  margin: 1rem;
 }
 
 .serv-flex-item {
   background-color: var(--secondaryColor);
   box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);
   border-radius: 10px;
-  padding: 0rem;
-  width: 400px;
+  /* width: 400px; */
+  width: 25rem;
+  flex-wrap: wrap;
   height: fit-content;
 }
 .card-title-serv{
   color: var(--accentColor);
   font-family: 'Roboto', bold;
-  font-size: 20px;
-  margin-bottom: 5px;
+  /* font-size: 20px; */
+  font-size: 1.25rem;
+  margin-bottom: 0.313rem;
   text-align: center;
 }
 .card-text-serv{
   text-align: center;
   font-family: 'Roboto', regular;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--cardText);
 }
 
@@ -179,8 +215,8 @@ body {
 
 /* estilos para la seccion de informacion */
 #informacion{
-  margin-top: 20px;
-  margin-bottom: 150px;
+  margin-top: 1.25rem;
+  margin-bottom: 4,688rem;
 }
 .info-container{
   display: flex;
@@ -201,12 +237,27 @@ body {
   color: darkgray;
 }
 .info-item > img{
-  height: 100px;
+  height: 6.25rem;
 }
 
 #whatsapp > a > img{
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 75px;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 4.688rem;
+}
+
+@media (max-width: 800px) {
+  .serv-flex-container {
+    flex-direction: column;
+  }
+  .serv-flex-item{
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 650px){
+  #informacion {
+    visibility: hidden;
+  }
 }
