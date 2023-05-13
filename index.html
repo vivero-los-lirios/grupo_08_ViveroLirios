@@ -21,12 +21,11 @@
 <body>
   <!--Seccion Header-->
   <header class="header">
-    <div class="header__contenedor">
+
       <nav class="navegacion">
         <div class="navegacion__logo">
           <img class="img" src="./assets/images/logo.png" alt="logo">
         </div>
-
         <ul class="menu">
           <li class="menu_li"><a class="menu_link" href="#portada">INICIO</a></li>
           <li class="menu_li"><a class="menu_link" href="#productos">PRODUCTOS</a></li>
@@ -35,16 +34,37 @@
           <li class="menu_li"><a class="menu_link" href="#contacto">CONTACTO</a></li>
           <li class="menu_li">
             <form action="#" class="form-busqueda">
-              <input type="text" placeholder="  Buscar...">
+              <input type="search" placeholder="Buscar...">
               <button type="submit"><i class="fa fa-search"></i></button>
             </form>
           </li>
-          <li class="menu_li"><a class="menu_link" href="#">Log In</a></li>
-          <li class="menu_li"><a class="menu_link" href="#">Log Out</a></li>
+        </ul>
+          <ul>
+          <li class="menu_li"><a class="menu_link" href="#">INGRESAR</a></li>
+          <!-- <li class="menu_li"><a class="menu_link" href="#">Log Out</a></li> -->
           <li class="menu_li"><a class="menu_link" href="#"><i class="fa fa-shopping-cart"></i></a></li>
         </ul>
+        <div class="menu__icono" id="open">
+          <i class="fa fa-bars open" aria-hidden="true"></i>
+          
+          <!-- TODO: agregar el icono de cerrar-->
+          <!-- <i class="fa fa-times close" aria-hidden="true"></i> -->
+        </div>
+        <div class="menu__celular" id="menu__celular">
+          <ul class="menu">
+            <li class="menu_li"><a class="menu_link" href="#portada">INICIO</a></li>
+            <li class="menu_li"><a class="menu_link" href="#productos">PRODUCTOS</a></li>
+            <li class="menu_li"><a class="menu_link" href="#servicios">SERVICIOS</a></li>
+            <li class="menu_li"><a class="menu_link" href="#about_us">NOSOTROS</a></li>
+            <li class="menu_li"><a class="menu_link" href="#contacto">CONTACTO</a></li>
+            <br>
+            <br>
+            <li class="menu_li"><a class="menu_link" href="#">INGRESAR</a></li>
+            <!-- <li class="menu_li"><a class="menu_link" href="#">Log Out</a></li> -->
+            <li class="menu_li"><a class="menu_link" href="#"><i class="fa fa-shopping-cart"></i></a></li>
+          </ul>
+        </div>
       </nav>
-    </div>
 
   </header>
 
@@ -60,6 +80,16 @@
         <li><img src="./assets/images/carrusel3.jpg" alt="jardin de lirios"></li>
       </ul>
     </div>
+    <div class="portada__box">
+      <div class="portada__box-container">
+      <h1>Virero Los Lirios</h1>
+      <p>¡Bienvenido/a! Aquí encontrarás una amplia variedad de plantas de Lirios de alta calidad para darle un toque natural y fresco a cualquier espacio de tu hogar.</p>
+      <br>
+      <p>Explora nuestra colección y encuentra el Lirio ideal para dar vida a tu hogar. ¡No esperes más para disfrutar de la belleza de la naturaleza en tu hogar!</p>
+      <button>VER PRODUCTOS</button>
+    </div>
+  </div>
+    <div class="portada__fade"></div>
 
   </section>
 
@@ -67,7 +97,7 @@
 
   <section id="productos" class="flex-productos-container">
     <div>
-      <h2 id="product-title">Productos: </h2>
+      <h2 id="product-title">PRODUCTOS</h2>
     </div>
 
     <div class="grid-container">
@@ -184,7 +214,7 @@
 
     <div class="flex-elem-serv">
       <div>
-        <h2 id="servicios-title">Servicios: </h2>
+        <h2 id="servicios-title">SERVICIOS</h2>
       </div>
 
       <div class="serv-flex-container">
@@ -199,7 +229,7 @@
 
         <div class="serv-flex-item">
           <div class="card-info">
-            <h4 class="card-title-serv">Diseño y ejecucion de parques y jardines.</h4>
+            <h4 class="card-title-serv">Diseño y ejecucion de<br>parques y jardines.</h4>
             <p class="card-text-serv">Contamos con especialistas en paisajismo.</p>
           </div>
           <img class="image-serv" src="./assets/images/servicio_jardineria.jpg"
@@ -225,7 +255,22 @@
 
 <!-- Seccion contacto -->
 <section id="contacto">
-  <h2> Acá agregar formulario de contacto y el mapa</h2>
+  <h2 class="contacto__titulo"> CONTACTANOS </h2>
+  <div class="contacto__container">
+    <form>
+      <label for="nombre">Nombre:
+        <input type="text" id="nombre">
+      </label>
+      <label for="email">Correo:
+        <input type="email" id="email">
+      </label>
+      <label for="mensaje">Mensaje:
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+      </label>
+      <button type="submit">ENVIAR</button>
+    </form>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12553.419242785501!2d-61.81092347452089!3d-38.13194196596664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95eceeb3c5f52fcd%3A0x6d75d51090223690!2sVivero%20Los%20Lirios!5e0!3m2!1ses-419!2sar!4v1683947964591!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 </section>
 
 
@@ -279,7 +324,7 @@
   <div id="whatsapp">
     <a href="#"><img src="./assets/icons/whatsapp.png" alt="icono de whatsapp"></a>
   </div>
-
+<script src="./assets/index.js"></script>
 </body>
 
 </html>
