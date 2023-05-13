@@ -93,7 +93,7 @@ body {
   
 } */
 .navegacion__logo,
-.navegacion ul:last-child {
+.navegacion .carrito {
   width: 30%;
 }
 .menu_link {
