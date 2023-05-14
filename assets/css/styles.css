@@ -57,7 +57,7 @@ body {
   align-items: center;
   background-color: var(--secondaryColor);
   top: 0;
-  padding: 1rem;
+  padding: 1rem 3rem;
   font-size: 1rem;
   z-index: 10;
 }
@@ -71,6 +71,7 @@ body {
   display: block;
   max-width: 5rem;
   height: 100%;
+  border-radius: 8px;
 }
 
 .menu {
@@ -104,6 +105,8 @@ body {
 .menu_link:hover {
   color: black;
 }
+
+
 
 /* PORTADA */
 section {
@@ -241,6 +244,8 @@ section {
   padding-top: var(--headerHeight);
 }
 
+
+
 /* PRODUCTOS */
 .flex-productos-container {
   display: flex;
@@ -321,7 +326,9 @@ section {
   box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);
 }
 
-/*estilos  para la seccion servicios*/
+
+
+/*SERVICIOS*/
 #servicios-title {
   font-family: "Roboto", regular;
   font-size: 2rem;
@@ -347,10 +354,8 @@ section {
 .serv-flex-item {
   background-color: var(--secondaryColor);
   box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);
-  width: minmax(250px, 360px);
   border-radius: 12px;
-  /* width: 400px; */
-  width: 25rem;
+  width: 350px;
   height: auto;
   flex-wrap: wrap;
   padding-top: 1rem;
@@ -379,7 +384,8 @@ section {
   margin-top: 5px;
 }
 
-/* estilos para la seccion de informacion */
+
+/* INFORMACION*/
 #informacion {
   margin-top: 1.25rem;
   margin-bottom: 4, 688rem;
@@ -413,21 +419,8 @@ section {
   z-index: 20;
 }
 
-/* @media (max-width: 800px) {
-  .serv-flex-container {
-    flex-direction: column;
-  }
-  .serv-flex-item{
-    margin-bottom: 1rem;
-  }
-}
 
-@media (max-width: 650px){
-  #informacion {
-    visibility: hidden;
-  }
-} */
-
+/* CONTACTO */
 #contacto {
   margin: 2rem 0;
 }
@@ -491,13 +484,100 @@ form button:hover {
   box-shadow: 0 4px 8px 0 rgba(155, 132, 132, 0.493);
 }
 .menu__celular,
-.menu__icono {
+#menu__icono{
   display: none;
 }
+
+.container{
+  max-width: 1170px;
+  background-color: #891D44;
+  margin: auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+
+.footer{
+  background-color: #891D44;
+  padding: 30px 0;
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4{
+  font-size: 20px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color:black;
+  height: 2px;
+  box-sizing: border-box;
+  
+}
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer ul li a{
+  text-decoration: none;
+  font-weight: 300;
+  color: #F1FFE7;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+  color: black;
+  padding-left: 5px;
+}
+
+.footer-col .redes-sociales a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color:black;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s ease;
+
+}
+
+.footer-col .redes-sociales a:hover{
+  color:black;
+  background-color: #ffffff;
+}
+
 
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1024px) {
+  .header{
+    padding: 1rem 2rem;
+  }
   .form-busqueda {
     display: none;
   }
@@ -521,16 +601,26 @@ form button:hover {
   .contacto__container form {
     width: 80%;
   }
+  .footer-col{
+    width: 35%;
+    margin-bottom: 30px;
+}
 }
 
 @media screen and (max-width: 425px) {
   html {
     font-size: 12px;
   }
+  .header{
+    padding: 1rem 1rem;
+  }
+  .navegacion{
+    justify-content: space-between;
+  }
   .navegacion ul {
     display: none;
   }
-  .menu__icono {
+  #menu__icono {
     display: block;
     color: #fff;
     font-size: 2.5rem;
@@ -548,6 +638,8 @@ form button:hover {
     background-color: var(--secondaryColor);
     width: 100%;
     height: 100vh;
+    padding: 0 4rem;
+    user-select: none;
   }
   .menu__celular ul{
     display: block;
@@ -557,6 +649,13 @@ form button:hover {
   .menu__celular ul li{
     margin: .5rem 0;
   }
+/*   #menu-cruz{
+    display: block;
+  } */
+  .close{
+    display: none !important; 
+  }
+
   .portada__box h1 {
     font-size: 2rem;
     margin: 0.3em 0 0.5em;
@@ -576,4 +675,7 @@ form button:hover {
   #informacion {
     visibility: hidden;
   }
+  .footer-col{
+    width: 100%;
+}
 }
