@@ -29,7 +29,7 @@ let fetchProvicias = () => {
 }
 /* Configuracion para que el selector de provincia se cargue cuando la pagina es lista*/
 window.onload = async function (event) {
-  
+
   event.preventDefault();
   console.log("evento click de provincia");
   const listaProvincias = await fetchProvicias();/*invoco a la fc para cargar las provincias*/
@@ -41,31 +41,30 @@ window.onload = async function (event) {
       newOption.text = `${listaProvincias.provincias[i].nombre}`;
       opcProvicia.add(newOption);
     }
-    
+
   }
 }
-
 
 /* Funcion para traer las ciudades le la provincia seleccionada*/
 let fetchCiudades = (buscarProv) => {
   return fetch(buscarProv)
-  .then(response => response.json())
-  .catch(error=>console.log(error));
+    .then(response => response.json())
+    .catch(error => console.log(error));
 }
 
 /* Funciones para cargar las ciudades de la provincia seleccionada*/
-opcProvicia.addEventListener('change', async function(event){
+opcProvicia.addEventListener('change', async function (event) {
   event.preventDefault();
-  
+
   let provinciaSeleccionada = opcProvicia.options[opcProvicia.selectedIndex].value;
   let BuscarProvincia = `https://apis.datos.gob.ar/georef/api/localidades?provincia=${provinciaSeleccionada}`;
   const listaCiudades = await fetchCiudades(BuscarProvincia);
-  
+
   let delOpc = document.querySelector('#ciudad option');
-  if(delOpc){
+  if (delOpc) {
     delOpc.remove();
-  } 
-  
+  }
+
   if (listaCiudades) {
     for (let i = 0; i < listaCiudades.cantidad; i++) {
 
@@ -73,7 +72,30 @@ opcProvicia.addEventListener('change', async function(event){
       newOption.text = `${listaCiudades.localidades[i].nombre}`;
       opcCiudad.add(newOption);
     }
-    
+
   }
 })
+
+/*Funciones para poder registrar los datos del formulario*/
+
+const formulario = document.getElementById('form');
+
+formulario.addEventListener('submit', async function (event) {
+
+  event.preventDefault();
+
+  const datoForm = new FormData(this);
+  const response = await fetch('https://formspree.io/f/moqzbkod', {
+    method: 'POST',
+    body: datoForm,
+    headers: { 'Accept': 'application/json' }
+  })
+
+  if (response.ok) {
+    alert("Consulta enviada con exito.");
+  }
+  this.reset();/*Limpio el formulario*/
+})
+
+
 

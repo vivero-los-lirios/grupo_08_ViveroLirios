@@ -256,17 +256,19 @@
   <section id="contacto">
     <h2 class="contacto__titulo"> CONTACTANOS </h2>
     <div class="contacto__container">
-      <form id="form">
+      <form id="form" action="https://formspree.io/f/moqzbkod" method="POST">
         <label for="nombre">Nombre:
-          <input type="text" id="nombre" required>
+          <input type="text" id="nombre">
         </label>
         <label for="email">Correo:
-          <input type="email" id="email" required>
+          <input type="email" id="email">
         </label>
-        <label for="provincia">Provincia:</label>
-        <select name="provincia" id="provincia"></select>
-        <label for="ciudad">Ciudad:</label>
-        <select name="ciudad" id="ciudad"></select>
+        <label for="provincia">Provincia:
+          <select name="provincia" id="provincia"></select>
+        </label>
+        <label for="ciudad">Ciudad:
+          <select name="ciudad" id="ciudad"></select>
+        </label>
         <label for="mensaje">Mensaje:
           <textarea name="mensaje" id="mensaje" cols="30" rows="8"></textarea>
         </label>
