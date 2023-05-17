@@ -79,13 +79,13 @@ opcProvicia.addEventListener('change', async function (event) {
 /*Funciones para poder registrar los datos del formulario*/
 
 const formulario = document.getElementById('form');
-
 formulario.addEventListener('submit', async function (event) {
 
   event.preventDefault();
 
-  const datoForm = new FormData(this);
-  const response = await fetch('https://formspree.io/f/moqzbkod', {
+  const datoForm = new FormData(formulario);
+  
+    const response = await fetch('https://formspree.io/f/moqzbkod', {
     method: 'POST',
     body: datoForm,
     headers: { 'Accept': 'application/json' }
@@ -93,8 +93,10 @@ formulario.addEventListener('submit', async function (event) {
 
   if (response.ok) {
     alert("Consulta enviada con exito.");
+    console.log(datoForm)
   }
-  this.reset();/*Limpio el formulario*/
+  /*Limpio el formulario*/
+  formulario.reset();
 })
 
 

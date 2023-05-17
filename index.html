@@ -21,7 +21,9 @@
 
     <nav class="navegacion">
       <div class="navegacion__logo">
+        <a href="#portada">
         <img class="img" src="./assets/images/logo.png" alt="logo">
+      </a>
       </div>
       <ul class="menu">
         <li class="menu_li"><a class="menu_link" href="#portada">INICIO</a></li>
@@ -85,7 +87,7 @@
         <br>
         <p>Explora nuestra colección y encuentra el Lirio ideal para dar vida a tu hogar. ¡No esperes más para disfrutar
           de la belleza de la naturaleza en tu hogar!</p>
-        <button>VER PRODUCTOS</button>
+        <button><a href="#productos">VER PRODUCTOS</a></button>
       </div>
     </div>
     <div class="portada__fade"></div>
@@ -258,10 +260,10 @@
     <div class="contacto__container">
       <form id="form" action="https://formspree.io/f/moqzbkod" method="POST">
         <label for="nombre">Nombre:
-          <input type="text" id="nombre">
+          <input type="text" name="nombre" id="nombre">
         </label>
         <label for="email">Correo:
-          <input type="email" id="email">
+          <input type="email" name="email" id="email">
         </label>
         <label for="provincia">Provincia:
           <select name="provincia" id="provincia"></select>
