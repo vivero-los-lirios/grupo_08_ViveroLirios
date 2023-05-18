@@ -390,6 +390,39 @@ section {
   border-radius: 40px 40px 5px 5px;
   margin-top: 5px;
 }
+/*SOBRE NOSOTROS */
+
+.about_us__box {
+  background-image: url("/assets/images/daylilies.jpg");
+  background-color: #fff;
+  border-radius: 10px; */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 40px; */
+}
+
+.about_us__box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+.about_us__box img {
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about_us__box p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
 
 /* INFORMACION*/
