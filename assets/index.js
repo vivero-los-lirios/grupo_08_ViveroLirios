@@ -76,28 +76,58 @@ opcProvicia.addEventListener('change', async function (event) {
   }
 })
 
+/*Validacion del formulario*/
+
+function validacionFormulario(){
+
+  var nombre= document.getElementById('nombre').value;
+  var email = document.getElementById('email').value;
+
+  //Campos no vacios
+
+  if (nombre === '' || email === ''){
+    alert("Debe completar todos los campos del formulario");
+    return false;
+  }
+
+  //Formato correo
+
+  var expresion= /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+  if (!expresion.test(email)){
+    alert("el email ingresado es incorrecto, intente nuevamente");
+    return false;
+  }
+
+  return true;
+}
+
 /*Funciones para poder registrar los datos del formulario*/
 
 const formulario = document.getElementById('form');
 formulario.addEventListener('submit', async function (event) {
-
   event.preventDefault();
 
-  const datoForm = new FormData(formulario);
-  
-    const response = await fetch('https://formspree.io/f/moqzbkod', {
-    method: 'POST',
-    body: datoForm,
-    headers: { 'Accept': 'application/json' }
-  })
+  if (validacionFormulario()) {
+    const datoForm = new FormData(formulario);
 
-  if (response.ok) {
-    alert("Consulta enviada con exito.");
-    console.log(datoForm)
+    try {
+      const response = await fetch('https://formspree.io/f/moqzbkod', {
+        method: 'POST',
+        body: datoForm,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        alert("Se envio el formulario con éxito.");
+        console.log(datoForm);
+        formulario.reset(); // Restablecer el formulario solo si la respuesta es exitosa
+      } else {
+        alert("Se produjo un error al enviar el formulario. Pruebe de nuevo.");
+      }
+    } catch (error) {
+      alert("Se produjo un error al enviar el formulario. Pruebe de nuevo");
+      console.log(error);
+    }
   }
-  /*Limpio el formulario*/
-  formulario.reset();
-})
-
-
+});
 
