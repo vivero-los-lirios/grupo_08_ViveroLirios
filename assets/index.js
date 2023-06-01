@@ -17,7 +17,7 @@ item.forEach((i) => {
   });
 });
 
-/* Funciones para cargar las provincias en el formulario */
+
 let opcProvicia = document.getElementById("provincia");
 let opcCiudad = document.getElementById("ciudad");
 
@@ -27,23 +27,28 @@ let fetchProvicias = () => {
     .then(response => response.json())
     .catch(error => console.log(`Error al buscar las provincias. ${error}`));
 }
-/* Configuracion para que el selector de provincia se cargue cuando la pagina es lista*/
-window.onload = async function (event) {
+/* Configuracion para que el selector de provincia se cargue cuando hago click y esta vacia*/
+
+opcProvicia.addEventListener('click', async function (event) {
 
   event.preventDefault();
-  console.log("evento click de provincia");
-  const listaProvincias = await fetchProvicias();/*invoco a la fc para cargar las provincias*/
-  /*Creo un string con el html para agregar todas provincias*/
-  if (listaProvincias) {
-    for (let i = 0; i < listaProvincias.cantidad; i++) {
+  /* Con este if buscamos que las provincias se carguen una sola vez */
 
-      let newOption = document.createElement("option");
-      newOption.text = `${listaProvincias.provincias[i].nombre}`;
-      opcProvicia.add(newOption);
+  if (opcProvicia.length === 0) {
+
+    const listaProvincias = await fetchProvicias();/*invoco a la fc para cargar las provincias*/
+
+    /*Creo un string con el html para agregar todas provincias*/
+    if (listaProvincias) {
+      for (let i = 0; i < listaProvincias.cantidad; i++) {
+
+        let newOption = document.createElement("option");
+        newOption.text = `${listaProvincias.provincias[i].nombre}`;
+        opcProvicia.add(newOption);
+      }
     }
-
   }
-}
+})
 
 /* Funcion para traer las ciudades le la provincia seleccionada*/
 let fetchCiudades = (buscarProv) => {
@@ -60,10 +65,7 @@ opcProvicia.addEventListener('change', async function (event) {
   let BuscarProvincia = `https://apis.datos.gob.ar/georef/api/localidades?provincia=${provinciaSeleccionada}`;
   const listaCiudades = await fetchCiudades(BuscarProvincia);
 
-  let delOpc = document.querySelector('#ciudad option');
-  if (delOpc) {
-    delOpc.remove();
-  }
+  document.querySelector('#ciudad').innerHTML = '';
 
   if (listaCiudades) {
     for (let i = 0; i < listaCiudades.cantidad; i++) {
@@ -78,22 +80,24 @@ opcProvicia.addEventListener('change', async function (event) {
 
 /*Validacion del formulario*/
 
-function validacionFormulario(){
+function validacionFormulario() {
 
-  var nombre= document.getElementById('nombre').value;
-  var email = document.getElementById('email').value;
+  let nombre = document.getElementById('nombre').value;
+  let email = document.getElementById('email').value;
+  let provincia = document.getElementById('provincia').selectedIndex;
+  let ciudad = document.getElementById('ciudad').selectedIndex;
+  let mensaje = document.getElementById('mensaje').value;
 
   //Campos no vacios
-
-  if (nombre === '' || email === ''){
+  if (nombre === '' || email === '' || ciudad === -1 || provincia === -1 || mensaje === '') {
     alert("Debe completar todos los campos del formulario");
     return false;
   }
 
   //Formato correo
 
-  var expresion= /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-  if (!expresion.test(email)){
+  var expresion = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+  if (!expresion.test(email)) {
     alert("el email ingresado es incorrecto, intente nuevamente");
     return false;
   }
@@ -108,6 +112,7 @@ formulario.addEventListener('submit', async function (event) {
   event.preventDefault();
 
   if (validacionFormulario()) {
+
     const datoForm = new FormData(formulario);
 
     try {
@@ -120,7 +125,12 @@ formulario.addEventListener('submit', async function (event) {
       if (response.ok) {
         alert("Se envio el formulario con éxito.");
         console.log(datoForm);
-        formulario.reset(); // Restablecer el formulario solo si la respuesta es exitosa
+
+        // Restablecer el formulario solo si la respuesta es exitosa
+        formulario.reset();
+        document.querySelector('#ciudad').innerHTML = '';
+        document.querySelector('#provincia').innerHTML = '';
+
       } else {
         alert("Se produjo un error al enviar el formulario. Pruebe de nuevo.");
       }
