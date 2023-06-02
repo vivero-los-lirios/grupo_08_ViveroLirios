@@ -533,6 +533,7 @@ form button:hover {
   background-color: var(--cardText);
   color: var(--secondaryColor);
   box-shadow: 0 4px 8px 0 rgba(155, 132, 132, 0.493);
+  cursor: pointer;
 }
 .menu__celular,
 #menu__icono{
