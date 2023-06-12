@@ -1,11 +1,44 @@
-# grupo_08_ViveroLirios
-TP 1 del curso Codo a Codo - Pagina web de un Vivero local
-
 # Vivero Los Lirios
 
 En este repo vamos a construir una pagina web dedicada a un vivero que se especializa en la venta de Lirio. Además, ofrece servicios de jardinería y venta de diversos productos necesarios para el cuidado y mantenimiento de su jardín.
 
-# Misión, Visión y Valores de Vivero Los Lirios
+<a href="https://vivero-los-lirios.github.io/grupo_08_ViveroLirios/"><b>🌍 Link Deploy</b></a>
+
+## Mockup y diseño
+
+<div width="100%">
+
+<img src="https://github.com/vivero-los-lirios/grupo_08_ViveroLirios/assets/97641886/1c272009-b169-44b0-95ad-847fdaef5ec6" width="45%" display="inline">
+
+<img src="https://github.com/vivero-los-lirios/grupo_08_ViveroLirios/assets/97641886/da0c3ee2-139a-4b43-970f-8b0f88f66a60" width="45%" display="inline">
+  
+</div>
+
+<br/>
+<br/>
+
+## Tecnologías
+
+- HTML
+- CSS
+- JavaScript
+<br/>
+<br/>
+
+## Características del sitio
+- Sitio Web "One Page" con 5 secciones.
+- Sitio Web Responsive (PC - Tablet - Móvil).
+- HTML semántico.
+- Utilización de Flexbox y Grid.
+- Animaciones.
+- Formulario de contacto con validaciones utilizando JavaScript y un servicio externo para el envío de mails.
+- Consumo de API. [*API Provincias*](https://datosgobar.github.io/georef-ar-api/)
+
+<br/>
+<br/>
+
+
+## Misión, Visión y Valores de Vivero Los Lirios
 
 ### Misión
 
@@ -32,7 +65,7 @@ Convertirnos en lideres en producción y comercialización de productos y servic
 
 
 
-# Productos y Servicios
+## Productos y Servicios
 
 Lo que ofreceremos se dividirá inicialmente en dos categorías: Productos y Servicios.
 
@@ -63,7 +96,7 @@ Una vez finalizado el proyecto, el cliente puede optar por contratar los servici
 
 
 
-# Audiencia objetivo y ajuste de nuestra oferta
+## Audiencia objetivo y ajuste de nuestra oferta
 
 Nuestro grupo/publico objetivo se basa en aquellas personas amantes de Los Lirios a quienes les interese deleitarse con sus colores y aromas.
 
@@ -71,7 +104,16 @@ La forma de llegar a nuestros clientes será mediante el uso de redes sociales c
 
 
 
-# Referentes en base a la propuesta elegida para el desarrollo de nuestra pagina web
+## Logos tentativos
+
+[![logo-1.png](https://i.postimg.cc/3xyR96Ny/logo-1.png)](https://postimg.cc/PCjT5Smh)
+
+[![logo-2.png](https://i.postimg.cc/C1JSwHdT/logo-2.png)](https://postimg.cc/gXwfDhvN)
+
+[![logo-3.png](https://i.postimg.cc/qMN4dKTS/logo-3.png)](https://postimg.cc/JGC9NGt5)
+
+
+## Referentes en base a la propuesta elegida para el desarrollo de nuestra pagina web
 
 [Vivero Agronomía](https://viveroagronomia.com.ar/)
 
@@ -87,10 +129,8 @@ La forma de llegar a nuestros clientes será mediante el uso de redes sociales c
 
 [Vivero Spinelli](https://www.viverospinelli.com.ar/)
 
-# Logos tentativos
 
-[![logo-1.png](https://i.postimg.cc/3xyR96Ny/logo-1.png)](https://postimg.cc/PCjT5Smh)
 
-[![logo-2.png](https://i.postimg.cc/C1JSwHdT/logo-2.png)](https://postimg.cc/gXwfDhvN)
 
-[![logo-3.png](https://i.postimg.cc/qMN4dKTS/logo-3.png)](https://postimg.cc/JGC9NGt5)
+
+
