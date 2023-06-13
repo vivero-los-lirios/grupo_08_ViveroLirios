@@ -131,6 +131,45 @@ La forma de llegar a nuestros clientes será mediante el uso de redes sociales c
 
 
 
+## Desarrolladores
+
+<table>
+  <tr>
+    <td>
+      <div align="center" width="120">
+      <a href="https://github.com/niicodeer" target="_blank" rel="author">
+        <img width="110" src="https://avatars.githubusercontent.com/u/97641886?v=4"/>
+        <h4 style="margin-top: 10px;">Nicolás Radín</h4>
+      </a>
+      </div>
+    </td>
+    <td>
+      <div align="center" width="120">      
+        <a href="https://github.com/Eduzurbriggen14" target="_blank" rel="author">
+         <img width="110" src="https://avatars.githubusercontent.com/u/106617650?v=4"/>
+          <h4 style="margin-top: 10px;">Eduardo Zurbriggen</h4>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center" width="120">      
+        <a href="https://github.com/alebain" target="_blank" rel="author">
+         <img width="110" src="https://avatars.githubusercontent.com/u/127340116?v=4"/>
+          <h4 style="margin-top: 10px;">Alejandra Bain</h4>
+        </a>
+      </div>
+    </td>
+    <td>
+      <div align="center" width="120">      
+        <a href="https://github.com/EscobarLuis" target="_blank" rel="author">
+         <img width="110" src="https://avatars.githubusercontent.com/u/5777667?v=4"/>
+          <h4 style="margin-top: 10px;">Luis Escobar</h4>
+        </a>
+      </div>
+    </td>
+
+  </tr>
+</table>
 
 
 
