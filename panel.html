@@ -9,16 +9,29 @@
 </head>
 <body>
 
-    <div id="formulario">
-    <input type="text" id="codigo" placeholder="Código">
-    <input type="text" id="nombre" placeholder="Nombre">
-    <input type="text" id="descripcion" placeholder="Descripción">
-    <input type="text" id="precio" placeholder="Precio">
-    <input type="text" id="stock" placeholder="Stock">
-    <input type="text" id="categoria" placeholder="Categoría">
-    <input type="text" id="imagen" placeholder="URL de la imagen">
-    <button id="btnAgregar">Agregar</button>
+  <button id="btnMostrarFormulario" >Agregar nuevo producto</button>
+
+  <div id="ventanaFormulario"> <!-- cremos la ventana emergente que contendra el formulario para crear un nuevo producto -->
+    <div id="formulario" style="display: none;">
+      <h2>Complete los campos para agregar un nuevo producto</h2>
+      <!-- <input type="text" id="codigo" placeholder="Código"> -->
+      <input type="text" id="nombre" placeholder="Nombre">
+      <input type="text" id="descripcion" placeholder="Descripción">
+      <input type="text" id="precio" placeholder="Precio">
+      <input type="text" id="stock" placeholder="Stock">
+      <select id="categoria"> <!-- usamos select para evitar errores al escribir las diferentes categorias -->
+        <option value="">Seleccione una categoría</option>
+        <option value="lirios">lirios</option>
+        <option value="herramientas">herramientas</option>
+        <option value="frutales">frutales</option>
+      </select>
+      <input type="text" id="imagen" placeholder="URL de la imagen">
+      <div>
+        <button type="button" id="btnAgregarFormulario">Agregar</button>
+        <button type="button" id="btnCancelarFormulario">Cancelar</button>
+      </div>    
     </div>
+  </div>
 
   <table id="productosTable">
     <thead>
@@ -38,12 +51,12 @@
     </tbody>
   </table>
 
-<div id="ventanaEmergente" class="ventana-emergente">
+<div id="ventanaEmergente" class="ventana-emergente">  <!-- ventana emergente que aparece al presionar sobre el boton editar -->
 
   <div id="formularioEditar" style="display: none;">
     <h2>Editar Producto</h2>
     <form>
-      <label for="codigoEditar">Código:</label>
+      <label for="codigoEditar">Código:</label> <!-- no es necesario colocar un valor ya que este atributo es autoincremental-->
       <input type="text" id="codigoEditar" disabled>
       <br>
       <label for="nombreEditar">Nombre:</label>
@@ -72,6 +85,6 @@
 
 </div>
 
-<script src="./frontend/assets/fetchData.js"></script>
+<script src="./frontend/assets/fetchData.js"></script> <!--vinculamos nuestro archivo js al html -->
 </body>
 </html>

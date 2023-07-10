@@ -1,12 +1,58 @@
+/* Estilos comunes para todos los tamaños de pantalla */
+#btnMostrarFormulario {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 15px;
+  background-color: #891d44;
+  color: #e6e6e6;
+  box-shadow: 0 2px 4pg rgba(0, 0, 0, 0.2);
+}
+
+#ventanaFormulario {
+  display: none; /* ocultamos el elemento */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#891d44;
+  width: 100%;
+  height: 100%;
+}
+
 #formulario {
-  margin-bottom: 20px;
+  display: flex; 
+  flex-direction: column; /* apilamos los elementos en columnas */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 70%; 
+  max-width: 500px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
+}
+
+#formulario h2{
+  color :#e6e6e6;
+}
+
+#formulario select{
+  width: 300px;
+}
+
+#formulario input {
+  margin-top: 10px;
+  width: 400px;
 }
 
 #formulario input[type="text"],
+
 #formulario button {
   display: block;
   margin-bottom: 10px;
 }
+
 
 #productosTable {
   border-collapse: collapse;
@@ -24,11 +70,11 @@
 }
 
 #productosTable tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; 
 }
 
 #productosTable tr:hover {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6; /* colorea las filas al pasar el cursos sobre ellas */
 }
 
 #productosTable td:last-child {
@@ -56,6 +102,18 @@
 }
 
 #productosTable td img {
-  width: 200px; /* Ajusta el ancho de la imagen según tus necesidades */
-  height: 150px; /* Ajusta la altura de la imagen según tus necesidades */
+  width: 200px; 
+  height: 150px; 
+}
+
+/* Estilos específicos para pantallas más pequeñas 768px o menor */
+@media screen and (max-width: 768px) {
+  #formulario {
+    width: 90%;
+  }
+  
+  #productosTable td img {
+    width: 150px;
+    height: 100px;
+  }
 }
