@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //funcion para obtener todos los productos de la base de datos, recibe los productos y va creando la tabla--------------------------
-  function obtenerProductos() {eduz14
+  function obtenerProductos() {
     // Url para usar la api del servidor remoto
     // fetch("http://luisescobar.pythonanywhere.com/productos")
     // fetch("http://eduz14.pythonanywhere.com/productos")

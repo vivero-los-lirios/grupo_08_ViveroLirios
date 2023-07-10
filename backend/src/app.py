@@ -10,7 +10,7 @@ CORS(app) #modulo cors es para que me permita acceder desde el frontend al backe
 # configuro la base de datos, con el nombre el usuario y la clave
 #app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://LuisEscobar:vivero123@LuisEscobar.mysql.pythonanywhere-services.com/LuisEscobar$lirios'
 #app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://eduz14:MyNewPass@eduz14.mysql.pythonanywhere-services.com/eduz14$losliriosBD'
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:MyNewPass@localhost/liriosDB'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:Zurdo123@localhost/liriosbd'
 # URI de la BBDD driver de la BD  user:clave@URLBBDD/nombreBBDD
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False #none
