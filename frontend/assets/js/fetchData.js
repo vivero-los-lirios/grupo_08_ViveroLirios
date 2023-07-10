@@ -60,10 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
       imagen: imagenInput.value,
     };
     // Url para usar la api del servidor
-    // fetch("http://luisescobar.pythonanywhere.com/producto", {
+    fetch("http://luisescobar.pythonanywhere.com/producto", {
     // fetch("http://eduz14.pythonanywhere.com/producto", {
     // Url para usar la api de local
-    fetch("http://127.0.0.1:5000/producto", {
+    //fetch("http://127.0.0.1:5000/producto", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -82,10 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //funcion para obtener todos los productos de la base de datos, recibe los productos y va creando la tabla--------------------------
   function obtenerProductos() {
     // Url para usar la api del servidor remoto
-    // fetch("http://luisescobar.pythonanywhere.com/productos")
+    fetch("http://luisescobar.pythonanywhere.com/productos")
     // fetch("http://eduz14.pythonanywhere.com/productos")
     // Url para usar la api local
-    fetch("http://127.0.0.1:5000/productos")
+    //fetch("http://127.0.0.1:5000/productos")
       .then((response) => response.json())
       .then((data) => {
         mostrarProductos(data);
@@ -222,10 +222,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     
     // Url para usar la api del servidor remoto
-    // fetch(`http://luisescobar.pythonanywhere.com/update/${codigo}`, {
+    fetch(`http://luisescobar.pythonanywhere.com/update/${codigo}`, {
       // fetch(`http://eduz14.pythonanywhere.com/update/${codigo}`, {
     // Url para usar la api local
-    fetch(`http://127.0.0.1:5000/update/${codigo}`, {
+    //fetch(`http://127.0.0.1:5000/update/${codigo}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -257,10 +257,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function eliminarProducto(event) {
     const codigo = event.target.closest("tr").getAttribute("data-codigo");
     // Url para usar la api del servidor remoto
-    // fetch(`http://luisescobar.pythonanywhere.com/delete/${codigo}`, {
+    fetch(`http://luisescobar.pythonanywhere.com/delete/${codigo}`, {
     // fetch(`http://eduz14.pythonanywhere.com/delete/${codigo}`, {
     // Url para usar la api local
-    fetch(`http://127.0.0.1:5000/delete/${codigo}`, {
+    //fetch(`http://127.0.0.1:5000/delete/${codigo}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
