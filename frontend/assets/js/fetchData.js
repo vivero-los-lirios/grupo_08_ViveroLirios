@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       row.appendChild(descripcionCell);
 
       const precioCell = document.createElement("td");
-      precioCell.textContent = `$`+producto.precio;
+      precioCell.textContent = producto.precio;
       row.appendChild(precioCell);
 
       const stockCell = document.createElement("td");
@@ -136,17 +136,17 @@ document.addEventListener("DOMContentLoaded", function () {
       row.appendChild(imagenCell);
 
       const accionesCell = document.createElement("td");
-      accionesCell.className="d-flex justify-content-center flex-wrap align-items-center gap-1"
-
+      //accionesCell.className="d-flex justify-content-center flex-wrap align-items-center gap-4"
+      accionesCell.className="py-1"
       //creamos el boton editar y eliminar
       const btnEditar = document.createElement("button");
       btnEditar.textContent = "Editar";
-      btnEditar.className="btn btn-secondary btn-sm flex-fill";
+      btnEditar.className="btn btn-secondary btn-sm d-block w-100 my-4";
       btnEditar.addEventListener("click", editarProducto);
       accionesCell.appendChild(btnEditar);
 
       const btnEliminar = document.createElement("button");
-      btnEliminar.className="btn btn-outline-danger btn-sm flex-fill"
+      btnEliminar.className="btn btn-outline-danger btn-sm d-block w-100 my-4"
       btnEliminar.textContent = "Eliminar";
       btnEliminar.addEventListener("click", eliminarProducto);
       accionesCell.appendChild(btnEliminar);
