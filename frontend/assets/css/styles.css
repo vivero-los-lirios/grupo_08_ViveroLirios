@@ -47,7 +47,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
+a{
+  text-decoration: none;
+}
 
+a:visited:hover{
+  color: black;
+}
 /* HEADER */
 .header {
   width: 100%;
@@ -197,6 +203,7 @@ section {
 }
 .portada__box-container a{
   text-decoration: none;
+  color: #000;
   display: block;
 }
 .portada__box-container a:visited{
@@ -513,7 +520,7 @@ section {
   border: none;
   resize: none;
 }
-.contacto__container form button {
+.contacto__container form button{
   background-color: var(--accentColor);
   font-size: 1.125rem;
   color: var(--textColor);
@@ -730,4 +737,15 @@ ul{
   .footer-col{
     width: 100%;
 }
+}
+.btn-panel{
+  width: 150px;
+  background-color: var(--accentColor);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 4px;
+}
+.btn-panel a, .btn-panel a:visited{
+  color: black;
 }
