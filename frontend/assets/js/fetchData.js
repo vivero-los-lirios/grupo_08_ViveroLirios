@@ -59,7 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
       categoria: categoriaInput.value,
       imagen: imagenInput.value,
     };
-
+    // Url para usar la api del servidor
+    // fetch("http://luisescobar.pythonanywhere.com/producto", {
+    // fetch("http://eduz14.pythonanywhere.com/producto", {
+    // Url para usar la api de local
     fetch("http://127.0.0.1:5000/producto", {
       method: "POST",
       headers: {
@@ -77,7 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //funcion para obtener todos los productos de la base de datos, recibe los productos y va creando la tabla--------------------------
-  function obtenerProductos() {
+  function obtenerProductos() {eduz14
+    // Url para usar la api del servidor remoto
+    // fetch("http://luisescobar.pythonanywhere.com/productos")
+    // fetch("http://eduz14.pythonanywhere.com/productos")
+    // Url para usar la api local
     fetch("http://127.0.0.1:5000/productos")
       .then((response) => response.json())
       .then((data) => {
@@ -207,7 +214,11 @@ document.addEventListener("DOMContentLoaded", function () {
       categoria: categoria,
       imagen: imagen,
     };
-
+    
+    // Url para usar la api del servidor remoto
+    // fetch(`http://luisescobar.pythonanywhere.com/update/${codigo}`, {
+      // fetch(`http://eduz14.pythonanywhere.com/update/${codigo}`, {
+    // Url para usar la api local
     fetch(`http://127.0.0.1:5000/update/${codigo}`, {
       method: "PUT",
       headers: {
@@ -239,7 +250,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //funcion para eliminar un producto mediante su codigo----------------------------------------------------------------
   function eliminarProducto(event) {
     const codigo = event.target.closest("tr").getAttribute("data-codigo");
-
+    // Url para usar la api del servidor remoto
+    // fetch(`http://luisescobar.pythonanywhere.com/delete/${codigo}`, {
+    // fetch(`http://eduz14.pythonanywhere.com/delete/${codigo}`, {
+    // Url para usar la api local
     fetch(`http://127.0.0.1:5000/delete/${codigo}`, {
       method: "DELETE",
     })

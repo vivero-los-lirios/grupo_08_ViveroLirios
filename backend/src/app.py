@@ -1,20 +1,18 @@
 from flask import Flask ,jsonify ,request
-# del modulo flask importar la clase Flask y los métodos jsonify,request
-from flask_cors import CORS       # del modulo flask_cors importar CORS
+from flask_cors import CORS   
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
-
-
 
 app=Flask(__name__)  # crear el objeto app de la clase Flask
 CORS(app) #modulo cors es para que me permita acceder desde el frontend al backend
 
 
 # configuro la base de datos, con el nombre el usuario y la clave
+#app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://LuisEscobar:vivero123@LuisEscobar.mysql.pythonanywhere-services.com/LuisEscobar$lirios'
 #app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://eduz14:MyNewPass@eduz14.mysql.pythonanywhere-services.com/eduz14$losliriosBD'
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:MyNewPass@localhost/liriosDB'
+# URI de la BBDD driver de la BD  user:clave@URLBBDD/nombreBBDD
 
-# URI de la BBDD                          driver de la BD  user:clave@URLBBDD/nombreBBDD
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False #none
 db= SQLAlchemy(app)   #crea el objeto db de la clase SQLAlquemy
 ma=Marshmallow(app)   #crea el objeto ma de de la clase Marshmallow
@@ -38,7 +36,7 @@ class Producto(db.Model):   # la clase Producto hereda de db.Model
         self.stock=stock
         self.categoria=categoria
         self.imagen=imagen
-    #  si hay que crear mas tablas , se hace aqui
+   
 
 with app.app_context(): #se crea un contexto de la app, esto nos permite poder acceder a la base de datos usando el objeto db
     db.create_all()  # aqui crea todas las tablas
@@ -47,14 +45,8 @@ class ProductoSchema(ma.Schema): #definimos como se muestran los datos en la tab
     class Meta:
         fields=('codigo','nombre','descripcion','precio','stock','categoria','imagen')
 
-
-
-
 producto_schema=ProductoSchema()            # El objeto producto_schema es para traer un producto, creamos una instancia
 productos_schema=ProductoSchema(many=True)  # El objeto productos_schema es para traer multiples registros de producto
-
-
-
 
 # crea los endpoint o rutas (json)
 @app.route('/productos',methods=['GET'])
