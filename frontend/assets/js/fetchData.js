@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //funcion para obtener todos los productos de la base de datos, recibe los productos y va creando la tabla--------------------------
-  function obtenerProductos() {eduz14
+  function obtenerProductos() {
     // Url para usar la api del servidor remoto
     // fetch("http://luisescobar.pythonanywhere.com/productos")
     // fetch("http://eduz14.pythonanywhere.com/productos")
@@ -101,7 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const row = document.createElement("tr");
       row.setAttribute("data-codigo", producto.codigo);
 
-      const codigoCell = document.createElement("td");
+      const codigoCell = document.createElement("th");
+      codigoCell.scope="row";
       codigoCell.textContent = producto.codigo;
       row.appendChild(codigoCell);
 
@@ -114,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       row.appendChild(descripcionCell);
 
       const precioCell = document.createElement("td");
-      precioCell.textContent = producto.precio;
+      precioCell.textContent = `$`+producto.precio;
       row.appendChild(precioCell);
 
       const stockCell = document.createElement("td");
@@ -127,20 +128,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const imagenCell = document.createElement("td");
       const imagen = document.createElement("img");
+      imagen.classList="img-fluid"
+      imagen.style="max-width: 150px"
       imagen.src = producto.imagen;
       imagen.alt = producto.nombre;
       imagenCell.appendChild(imagen);
       row.appendChild(imagenCell);
 
       const accionesCell = document.createElement("td");
+      accionesCell.className="d-flex justify-content-center flex-wrap align-items-center gap-1"
 
       //creamos el boton editar y eliminar
       const btnEditar = document.createElement("button");
       btnEditar.textContent = "Editar";
+      btnEditar.className="btn btn-secondary btn-sm flex-fill";
       btnEditar.addEventListener("click", editarProducto);
       accionesCell.appendChild(btnEditar);
 
       const btnEliminar = document.createElement("button");
+      btnEliminar.className="btn btn-outline-danger btn-sm flex-fill"
       btnEliminar.textContent = "Eliminar";
       btnEliminar.addEventListener("click", eliminarProducto);
       accionesCell.appendChild(btnEliminar);
