@@ -140,4 +140,57 @@ formulario.addEventListener('submit', async function (event) {
     }
   }
 });
+const productGrid= document.getElementById('grid-productos')
+
+function obtenerProductos() {
+  // Url para usar la api del servidor remoto
+   fetch("https://luisescobar.pythonanywhere.com/productos")
+  // fetch("http://eduz14.pythonanywhere.com/productos")
+  // Url para usar la api local
+  //fetch("http://127.0.0.1:5000/productos")
+    .then((response) => response.json())
+    .then((data) => {
+      mostrarProductos(data);
+    })
+    .catch((error) => console.log(error));
+}
+
+function mostrarProductos(productos) {
+  productGrid.innerHTML = ""; //limpia la tabla de productos
+
+  //recorremos los productos y creamos la tabla
+  productos.forEach((producto) => {
+    const card = document.createElement("div");
+    //row.setAttribute("data-codigo", producto.codigo);
+    card.className="grid-item"
+    const imgElem = document.createElement('img');
+    imgElem.className="image-item";
+    imgElem.src = producto.imagen;
+    imgElem.alt = producto.nombre;
+    card.appendChild(imgElem);
+
+    const descript = document.createElement('div');
+    descript.className="card-info";
+
+    const producTitle= document.createElement(`h4`);
+    producTitle.className="card-title";
+    producTitle.textContent = producto.nombre;
+    descript.appendChild(producTitle);
+
+    const productDesc = document.createElement('p');
+    productDesc.className="card-text"
+    productDesc.innerText=producto.descripcion
+    descript.appendChild(productDesc);
+
+    const comprarBtn = document.createElement('button');
+    comprarBtn.className="btn-item"
+    comprarBtn.innerText="COMPRAR"
+    descript.appendChild(comprarBtn);
+    
+
+    card.appendChild(descript);
+    productGrid.appendChild(card)
+  });
+}
+obtenerProductos()
 
