@@ -47,11 +47,11 @@ body {
   flex-direction: column;
   align-items: center;
 }
-a{
+a {
   text-decoration: none;
 }
 
-a:visited:hover{
+a:visited:hover {
   color: black;
 }
 /* HEADER */
@@ -111,8 +111,6 @@ a:visited:hover{
 .menu_link:hover {
   color: black;
 }
-
-
 
 /* PORTADA */
 section {
@@ -201,12 +199,12 @@ section {
   border-radius: 20px;
   text-align: center;
 }
-.portada__box-container a{
+.portada__box-container a {
   text-decoration: none;
   color: #000;
   display: block;
 }
-.portada__box-container a:visited{
+.portada__box-container a:visited {
   color: var(--textColor);
 }
 .portada__box h1 {
@@ -257,8 +255,6 @@ section {
   padding: 1em 2em;
   padding-top: var(--headerHeight);
 }
-
-
 
 /* PRODUCTOS */
 .flex-productos-container {
@@ -340,8 +336,6 @@ section {
   box-shadow: 0 4px 8px 0 rgba(100, 12, 12, 0.432);
 }
 
-
-
 /*SERVICIOS*/
 #servicios-title {
   font-family: "Roboto", regular;
@@ -399,15 +393,14 @@ section {
 }
 /*SOBRE NOSOTROS */
 
-
 .about_us__box {
   background-image: url("/assets/images/daylilies.jpg");
   background-color: #891d44;
-  border-radius: 50px; 
+  border-radius: 50px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin: 40px auto;
   max-width: 800px;
-  padding: 40px; 
+  padding: 40px;
 }
 
 .about_us__box-container {
@@ -417,9 +410,9 @@ section {
   align-items: center;
 }
 .responsive {
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
+}
 
 .about_us-title {
   font-size: 2rem;
@@ -428,7 +421,7 @@ section {
 .about_us__box img {
   margin-bottom: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  border : 10px solid #cfa116;
+  border: 10px solid #cfa116;
   border-radius: 50px;
 }
 
@@ -436,9 +429,8 @@ section {
   line-height: 1.5;
   margin-bottom: 20px;
   text-align: center;
-  color: #fff
+  color: #fff;
 }
-
 
 /* INFORMACION*/
 #informacion {
@@ -474,7 +466,6 @@ section {
   z-index: 20;
 }
 
-
 /* CONTACTO */
 #contacto {
   margin: 2rem 0;
@@ -506,8 +497,8 @@ section {
   color: var(--cardText);
 }
 
-.contacto__container form input, 
-.contacto__container form select{
+.contacto__container form input,
+.contacto__container form select {
   height: 3em;
 }
 .contacto__container form input,
@@ -520,7 +511,7 @@ section {
   border: none;
   resize: none;
 }
-.contacto__container form button{
+.contacto__container form button {
   background-color: var(--accentColor);
   font-size: 1.125rem;
   color: var(--textColor);
@@ -543,25 +534,25 @@ form button:hover {
   cursor: pointer;
 }
 .menu__celular,
-#menu__icono{
+#menu__icono {
   display: none;
 }
 
-.container{
+.container {
   max-width: 1170px;
-  background-color: #891D44;
+  background-color: #891d44;
   margin: auto;
 }
-.row{
+.row {
   display: flex;
   flex-wrap: wrap;
 }
-ul{
+ul {
   list-style: none;
 }
 
-.footer{
-  background-color: #891D44;
+.footer {
+  background-color: #891d44;
   padding: 30px 0;
   /* position: fixed; */
   bottom: 0;
@@ -569,12 +560,12 @@ ul{
   width: 100%;
 }
 
-.footer-col{
+.footer-col {
   width: 25%;
   padding: 0 15px;
 }
 
-.footer-col h4{
+.footer-col h4 {
   font-size: 20px;
   color: white;
   text-transform: capitalize;
@@ -583,58 +574,70 @@ ul{
   position: relative;
 }
 
-.footer-col h4::before{
+.footer-col h4::before {
   content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color:black;
+  background-color: black;
   height: 2px;
   box-sizing: border-box;
-  
 }
 
-.footer-col ul li:not(:last-child){
+.footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.footer ul li a{
+.footer ul li a {
   text-decoration: none;
   font-weight: 300;
-  color: #F1FFE7;
+  color: #f1ffe7;
   display: block;
   transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover{
+.footer-col ul li a:hover {
   color: black;
   padding-left: 5px;
 }
 
-.footer-col .redes-sociales a{
+.footer-col .redes-sociales a {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color:black;
+  background-color: black;
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
   border-radius: 10px;
   color: white;
   transition: all 0.3s ease;
-
 }
 
-.footer-col .redes-sociales a:hover{
-  color:black;
+.footer-col .redes-sociales a:hover {
+  color: black;
   background-color: #ffffff;
 }
 
+/* Boton para CRUD */
+.btn-panel {
+  width: 120px;
+  font-size: 1rem;
+  background-color: var(--accentColor);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 4px;
+}
+.btn-panel a,
+.btn-panel a:visited {
+  color: black;
+}
 
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1024px) {
-  .header{
+  .header {
     padding: 1rem 2rem;
   }
   .form-busqueda {
@@ -644,6 +647,9 @@ ul{
 @media screen and (max-width: 768px) {
   html {
     font-size: 14px;
+  }
+  .header{
+    padding: 1rem 3rem;
   }
   .grid-container {
     justify-content: center;
@@ -660,18 +666,9 @@ ul{
   .contacto__container form {
     width: 80%;
   }
-  .footer-col{
+  .footer-col {
     width: 35%;
     margin-bottom: 30px;
-}
-}
-
-@media screen and (max-width: 425px) {
-  html {
-    font-size: 12px;
-  }
-  .header{
-    padding: 1rem 1rem;
   }
   .navegacion{
     justify-content: space-between;
@@ -686,9 +683,9 @@ ul{
     padding: 1rem;
     z-index: 2;
   }
-.mostrar{
+  .mostrar {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -700,20 +697,69 @@ ul{
     padding: 0 4rem;
     user-select: none;
   }
-  .menu__celular ul{
+  .menu__celular ul,
+  .menu__celular button {
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  
-  .menu__celular ul li{
-    margin: .5rem 0;
+
+  .menu__celular ul li {
+    margin: 0.5rem 0;
   }
-/*   #menu-cruz{
+  /*   #menu-cruz{
+  display: block;
+} */
+  .close {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 12px;
+  }
+  .header {
+    padding: 1rem 1rem;
+  }
+  .navegacion {
+    justify-content: space-between;
+  }
+  /* .navegacion ul {
+    display: none;
+  }
+  #menu__icono {
     display: block;
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 1rem;
+    z-index: 2;
+  }
+  .mostrar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondaryColor);
+    width: 100%;
+    height: 100vh;
+    padding: 0 4rem;
+    user-select: none;
+  }
+  .menu__celular ul,
+  .menu__celular button {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .menu__celular ul li {
+    margin: 0.5rem 0;
+  } 
+  .close {
+    display: none !important;
   } */
-  .close{
-    display: none !important; 
-  }
 
   .portada__box h1 {
     font-size: 2rem;
@@ -734,18 +780,7 @@ ul{
   #informacion {
     visibility: hidden;
   }
-  .footer-col{
+  .footer-col {
     width: 100%;
-}
-}
-.btn-panel{
-  width: 150px;
-  background-color: var(--accentColor);
-  outline: none;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 4px;
-}
-.btn-panel a, .btn-panel a:visited{
-  color: black;
+  }
 }
